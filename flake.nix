@@ -11,17 +11,23 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-	#ruby = pkgs.ruby.withPackages (ps: with ps; [ pry ] );
+	gems = pkgs.bundlerEnv {
+	  name = "gems-for-github-linguist";
+	  gemdir = ./.;
+	};
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; [ neovim 
-				  #ruby 
+          packages = with pkgs; [ bundix
+				  openssl
+				  gems
+				  gems.wrappedRuby
 				  ];
-
-	  shellHook = ''
-	    export DEV_ENV=nixie
-	  '';
         };
+	packages.default = pkgs.bundlerApp {
+	  pname = "github-linguist";
+	  gemdir = ./.;
+	  exes = [ "github-linguist" ];
+	};
       });
 }

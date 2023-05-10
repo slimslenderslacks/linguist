@@ -13,9 +13,8 @@ RUN --mount=type=cache,target=/nix,from=nixos/nix:latest,source=/nix \
     --option filter-syscalls false \
     --show-trace \
     --log-format raw \
-    build . --out-link /tmp/output
-  cp -R $(nix-store -qR /tmp/output/) /tmp/nix-store-closure
-  cp -R $(readlink /tmp/output) /tmp/result
+    build . --out-link /tmp/output/result
+  cp -R $(nix-store -qR /tmp/output/result) /tmp/nix-store-closure
 EOF
 
 FROM scratch
@@ -23,5 +22,5 @@ FROM scratch
 WORKDIR /app
 
 COPY --from=builder /tmp/nix-store-closure /nix/store
-COPY --from=builder /tmp/result/ /app/
-ENTRYPOINT ["/app/bin/entrypoint"]
+COPY --from=builder /tmp/output/ /app/
+ENTRYPOINT ["/app/result/bin/entrypoint"]

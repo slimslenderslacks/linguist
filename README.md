@@ -29,3 +29,9 @@ The `/nix/store` layer is scannable.
 docker build -t docker/linguist:latest --progress plain .
 docker run -it --rm -v $HOME:$HOME docker/linguist:latest $HOME/slimslenderslacks/linguist
 ```
+
+Get rid of the cache using
+
+```
+docker builder prune --filter type=exec.cachemount
+```

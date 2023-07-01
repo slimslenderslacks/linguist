@@ -9,6 +9,8 @@
   outputs = { nixpkgs, ... }@inputs:
     inputs.platform-engineering.ruby-project
       {
+        name = "linguist";
+        version = "0.1.0";
         inherit nixpkgs;
         dir = ./.;
       };

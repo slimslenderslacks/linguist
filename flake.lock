@@ -153,11 +153,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1694326432,
-        "narHash": "sha256-WAUl/qkX+amP4Y/hGekrFBeJDkzR5UjUmwj6FPeY9Aw=",
+        "lastModified": 1694327967,
+        "narHash": "sha256-CqfRNT/qgi4LZyKvQ5qICGw8wO6XSTDEhix6WgSd1bc=",
         "owner": "slimslenderslacks",
         "repo": "nix-modules",
-        "rev": "8c6c8150561d404322fb4c70d5c2aa73ee0220aa",
+        "rev": "48f36793aae23dac470755f3182043626c4ddad4",
         "type": "github"
       },
       "original": {

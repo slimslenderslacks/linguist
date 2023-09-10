@@ -3,6 +3,7 @@
 
   inputs = {
     platform-engineering.url = "github:slimslenderslacks/nix-modules";
+    #platform-engineering.url = "/Users/slim/slimslenderslacks/nix-modules";
     nixpkgs.url = "github:NixOS/nixpkgs/release-22.11";
   };
 

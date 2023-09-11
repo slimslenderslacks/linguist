@@ -2,8 +2,11 @@
   description = "linguist";
 
   inputs = {
-    platform-engineering.url = "github:slimslenderslacks/nix-modules";
-    #platform-engineering.url = "/Users/slim/slimslenderslacks/nix-modules";
+    platform-engineering = {
+      url = "github:slimslenderslacks/nix-modules";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs.url = "github:NixOS/nixpkgs/release-22.11";
   };
 

@@ -139,11 +139,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1694415841,
-        "narHash": "sha256-rzGJmBykh2fyfF9k2RNgXRwPVW+t9VCBKcc8A2ANTvY=",
+        "lastModified": 1694811660,
+        "narHash": "sha256-9pHtNFD6DAuotEMm6vTgo+OVrraB22DgYuxk5wp6ndE=",
         "owner": "slimslenderslacks",
         "repo": "nix-modules",
-        "rev": "75ea2114ae8d51c4e7c4fac52392a24936bf30e4",
+        "rev": "51973254246f5cf3b2e68f842f0fd4c1cde200a9",
         "type": "github"
       },
       "original": {
